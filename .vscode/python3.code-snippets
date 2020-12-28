@@ -1,0 +1,86 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"bisect": {
+		"prefix": ["bisect", "bisect_left"],
+		"body": [
+			"from bisect import ${1:bisect, }${2:bisect_left}",
+		],
+		"description": "import文"
+	},
+	"collections": {
+		"prefix": ["Counter", "defaultdict", "deque"],
+		"body": [
+			"from collections import ${1:Counter, }${2:defaultdict, }${3:deque}"
+		],
+		"description": "import文"
+	},
+	"functools": {
+		"prefix": ["reduce"],
+		"body": [
+			"from functools import reduce",
+		],
+		"description": "import文"
+	},
+	"itertools": {
+		"prefix": ["accumulate", "combinations", "permutations", "product"],
+		"body": [
+			"from itertools import ${1:accumulate, }${2:combinations, }${3:permutations, }${4:product}",
+		],
+		"description": "import文"
+	},
+	"math": {
+		"prefix": ["gcd"],
+		"body": [
+			"from math import gcd",
+		],
+		"description": "import文"
+	},
+	"operator": {
+		"prefix": ["add", "mul", "sub", "truediv", "floordiv", "mod", "xor"],
+		"body": [
+			"from operator import ${1:add, }${2:mul, }${3:sub, }${4:truediv, }${5:floordiv, }${6:mod, }${7:xor}",
+		],
+		"description": "import文"
+	},
+	"input0": {
+		"prefix": "scan",
+		"body": [
+			"${1:N}, ${2:M} = map(int, input().split())",
+		],
+		"description": "N, M =",
+	},
+	"input1": {
+		"prefix": "scan",
+		"body": [
+			"${1:A} = map(int, input().split())"
+		],
+		"description": "[1, 2,…] スペース区切り"
+	},
+	"input2": {
+		"prefix": "scan",
+		"body": [
+			"${1:A} = [tuple(map(int, input().split())) for _ in [0] * ${2:N}]",
+		],
+		"description": "[(1, 2),…]"
+	},
+	"input3": {
+		"prefix": "scan",
+		"body": [
+			"${1:A} = [int(input()) for _ in [0] * ${2:N}]",
+		],
+		"description": "[1, 2,…] 改行区切り"
+	}
+}
