@@ -10,11 +10,13 @@
             "request": "launch",
             "stopOnEntry": false,
             "python": "${command:python.interpreterPath}",
+            "pythonArgs": [
+                "-O"
+            ],
             "program": "${file}",
             "cwd": "${fileDirname}",
             "args": [
-                "${file}",
-                "<",
+                // "<",
                 "${workspaceFolder}/input.txt"
             ]
         },
