@@ -1,4 +1,4 @@
-'''
+"""
 from math import gcd
 from itertools import accumulate, combinations, permutations, product
 from bisect import bisect, bisect_left
@@ -12,7 +12,14 @@ getcontext().prec = 500
 
 import string
 ascii = string.ascii_lowercase
-'''
+"""
+if not __debug__:
+    import sys
+
+    f = open(sys.argv[1], "r")
+    sys.stdin = f
+
+# --- Submit from here to the end ---
 from sys import stdin
 
 
@@ -24,15 +31,11 @@ def main():
         A = map(int, input().split())
         A = [int(input()) for _ in [0] * N]
         A = [tuple(map(int, input().split())) for _ in [0] * N]  # [(1, 2), (3, 4)]
-        A = [(i, int(j)) for i, j in (input().split() for _ in [0] * N)]  # [('A', 1), ('B', 2), ('C', 3)]
+        A = [(s, int(t)) for s, t in (input().split() for _ in [0] * N)]  # [('A', 1), ('B', 2), ('C', 3)]
         A = stdin.read().splitlines()  # 複数行を一気に読む
         A, B, C, D = zip(*[map(int, input().split()) for _ in [0] * N])  # 列毎のタプルにする
-        A = dict(map(int, input().split()) for _ in [0] * N)  # {1: 2, 3: 4}
-        A = {i: int(input()) for i in range(N)}
-        A = {i: int(j) for i, j in enumerate(input().split(), start=1)}
-        A, B, C, D = (int(input()) for _ in [0] * 4)
 
-        print('Case #{}: {} {}'.format(t, a, b))
+        print(f"Case #{t}: {a} {b}")
 
 
 main()
